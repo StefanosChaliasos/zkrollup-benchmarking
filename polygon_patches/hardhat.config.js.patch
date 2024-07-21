@@ -1,0 +1,13 @@
+diff --git a/hardhat.config.js b/hardhat.config.js
+index 41ad5177fb..1a16e7fb65 100644
+--- a/hardhat.config.js
++++ b/hardhat.config.js
+@@ -10,7 +10,7 @@ module.exports = {
+     solidity: {
+         compilers: [
+             {
+-                version: '0.8.9',
++                version: '0.8.13',
+                 settings: {
+                     optimizer: {
+                         enabled: false,
