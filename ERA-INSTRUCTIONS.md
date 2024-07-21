@@ -1,6 +1,6 @@
-# Summary
+# Era's Benchmarking
 
-*Special thanks to Ramon Canales and Emil Luta from Matter Labs for discussion and helping with technical issues.*
+*Special thanks to Ramon Canales and Emil Luta from Matter Labs for the discussion and help with technical issues.*
 
 In this guide, we will set up a machine on the Google Cloud Platform (GCP), install zkSync Era and its dependencies, and finally, produce proofs for arbitrary transactions.
 
@@ -25,23 +25,23 @@ First, login into GCP and go to `Compute Engine` -> `VM Instances` -> `Create In
 
 Next, we want to correctly configure the machine. In the following screenshot, we highlight the configurations you have to change:
 
-![gcp-screenshot-1](https://hackmd.io/_uploads/SymQcKYyC.png)
+![gcp-screenshot-1](images/gcp-screenshot-1.png)
 
 Next, scroll down to the `Boot Disk` section and select `change`.
 
-![gcp-screenshot-2](https://hackmd.io/_uploads/r1xrqKYJR.png)
+![gcp-screenshot-2](images/gcp-screenshot-2.png)
 
 Finally, update the settings as follows.
 
-![gcp-screenshot-3](https://hackmd.io/_uploads/B1Zu5KtyA.png)
+![gcp-screenshot-3](images/gcp-screenshot-3.png)
 
 ## Connect to the machine
 
 Go back to your `VM instances` and connect to the newly created machine by clicking the `SSH` icon.
 
-![gcp-screenshot-4](https://hackmd.io/_uploads/S1IrqcY1C.png)
+![gcp-screenshot-4](images/gcp-screenshot-4.png)
 
-The, when you connect to you machine enable sudo access without a password.
+Then, when you connect to your machine, enable sudo access without a password.
 
 ```
 sudo visudo
@@ -192,7 +192,7 @@ First, change the current directory to `zksync-era.`
 cd zksync-era
 ```
 
-Next, we will init Era. The following command will take ~5 minutes.
+Next, we will initiate Era. The following command will take ~5 minutes.
 
 ```
 zk && zk init
@@ -218,7 +218,7 @@ If you get the following error:
 Error response from daemon: driver failed programming external connectivity on endpoint zksync-era-postgres-1
 ```
 
-Remember to shut down the postgres server and retry:
+Remember to shut down the Postgres server and retry:
 
 ```
 sudo systemctl stop postgresql
