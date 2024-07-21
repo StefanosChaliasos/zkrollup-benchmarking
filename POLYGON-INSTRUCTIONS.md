@@ -25,17 +25,17 @@ Next, we want to correctly configure and launch the machine.
 Select the orange button `Launch Instance`, then you will need to select the proper OS and machine type.
 In the following screenshot, we highlight the configurations you have to change (i.e., Ubuntu Server 22.04 LTS, 64-bit (x86), and r6i.metal:
 
-![aws-screenshot-1](images/aws-screenshot-1)
+![aws-screenshot-1](images/aws-screenshot-1.png)
 
 Next, scroll down to the `Create Key Pair` section and either select an existing one or create a new one.
 We will need that key to connect to the machine later. 
 When you download the key say it to a file called `pol.pem`.
 
-![aws-screenshot-2](images/aws-screenshot-2)
+![aws-screenshot-2](images/aws-screenshot-2.png)
 
 Finally, configure the storage as follows.
 
-![aws-screenshot-2](images/aws-screenshot-3)
+![aws-screenshot-2](images/aws-screenshot-3.png)
 
 Now, you can launch the machine.
 
@@ -245,7 +245,7 @@ npx hardhat compile
 
 The flow for the files and scripts involved on the creation of the input for the prover is the following:
 
-![polygon-flow](images/polygon-flow)
+![polygon-flow](images/polygon-flow.png)
 
 So, at the end of the day, we need to run two different scripts: `gen-test-vectors-evm.js` and `calldata-gen-inputs.js`.
 
