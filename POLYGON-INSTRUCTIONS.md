@@ -16,6 +16,8 @@ The instance we used has these characteristics:
 - **Boot disk space:** 1TB SSD
 - **OS:** Ubuntu 22.04 LTS
 
+Warning: For the v6.0.0 release of the `zkevm-prover` it is recommended to stick with Ubuntu 22.04 LTS, as newer releases come with an incompatible version of `libpqxx`.
+
 At the time of writing, this machine costs 8.064 USD per hour. Note that there might be regions that are cheaper, or you can reduce the cost with reserved pricing.
 
 ## AWS Instructions
