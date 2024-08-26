@@ -225,7 +225,9 @@ We can also see how much each proving phase took by investigating the `benchmark
 
 # Creating sample payloads for the prover
 
-In this first test, we are going to create a sample `erc20` transfer input file for the prover, and produce a proof for it.
+In the previous step, we created our first proof of some random looking inputs `testvectors/e2e/fork_9/input_executor_{0,1,2,3}.json`.
+
+Let's now look at generating proofs of concrete transactions which we define ourselves. Namely, we are going to create a sample `erc20` transfer input file for the prover, and produce a proof for it.
 
 To do this, we need to setup the `zkevm-testvectors` repository.
 
