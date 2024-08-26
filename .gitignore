@@ -1,3 +1,5 @@
 tags
 .*.swp
 polgon_bench_*
+polygon_bench/
+wallets.csv
