@@ -747,7 +747,7 @@ def benchmark_transfers_block(controller, addresses, timeout, nr_transfers, amou
 
 
 def benchmark_transfers(controller, addresses, timeout):
-    assert len(addresses) >= 200, "Not enough addresses for transfers benchmark. Need at least 200."
+    assert len(addresses) >= 201, "Not enough addresses for transfers benchmark. Need at least 201."
     amount = 1
     gas = 21000
 
