@@ -132,7 +132,7 @@ We need to do a minor update to `testvectors/config_runFile_e2e.json` file.
 We can do that using the following command.
 
 ```bash
-patch testvectors/config_runFile_e2e.json polygon_patches/config_runFile_e2e.json.patch
+patch testvectors/config_runFile_e2e.json ../zkrollup-benchmarking/polygon_patches/config_runFile_e2e.json.patch
 ```
 
 ### Modify `aggregator_service.cpp`
@@ -140,7 +140,7 @@ patch testvectors/config_runFile_e2e.json polygon_patches/config_runFile_e2e.jso
 We also need to apply some changes to `test/service/aggregator/aggregator_service.cpp` using the following command.
 
 ```bash
-patch test/service/aggregator/aggregator_service.cpp polygon_patches/aggregator_service.cpp.patch
+patch test/service/aggregator/aggregator_service.cpp ../zkrollup-benchmarking/polygon_patches/aggregator_service.cpp.patch
 ```
 
 With these changes we are, basically, doing two main things:
