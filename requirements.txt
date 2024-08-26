@@ -1,0 +1,9 @@
+web3>=6.10.0,<7
+py-solc-x
+zksync2
+eth_account
+eth_typing
+eth_utils
+pandas
+sshtunnel
+psycopg2-binary

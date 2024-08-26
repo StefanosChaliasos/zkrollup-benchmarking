@@ -688,6 +688,7 @@ def transfer_task(controller, from_priv_key, to_addr, amount, gas):
 
 
 def benchmark_transfers_block(controller, addresses, timeout, nr_transfers, amount, gas, is_different=False, is_parallel=False):
+    assert len(addresses) >= nr_transfers, f"Not enough addresses for transfers benchmark. Need at least {nr_transfers}."
     # variables to keep track of elapsed time and how much time we need to wait
     start = 0
     elapsed = 0
@@ -746,6 +747,7 @@ def benchmark_transfers_block(controller, addresses, timeout, nr_transfers, amou
 
 
 def benchmark_transfers(controller, addresses, timeout):
+    assert len(addresses) >= 201, "Not enough addresses for transfers benchmark. Need at least 201."
     amount = 1
     gas = 21000
 
@@ -763,6 +765,7 @@ def benchmark_transfers(controller, addresses, timeout):
 
 
 def benchmark_transfers_max(controller, addresses, timeout):
+    assert len(addresses) >= 4980, "Not enough addresses for max transfers benchmark. Need at least 4980."
     amount = 1
     gas = 21000
 
@@ -823,6 +826,7 @@ def benchmark_erc20_block(
         controller = initial_controller
 
 def benchmark_erc20(controller, addresses, timeout):
+    assert len(addresses) >= 200, "Not enough addresses for ERC20 benchmark. Need at least 200."
     # Initialize the ERC20 contract
     owner_priv_key = addresses[0][0]
     owner_address = addresses[0][1]
@@ -879,6 +883,7 @@ def benchmark_erc20(controller, addresses, timeout):
 
 
 def benchmark_deploy_block(controller, addresses, timeout, nr_deployments):
+    assert len(addresses) >= nr_deployments, f"Not enough addresses for deploy benchmark. Need at least {nr_deployments}."
     # variables to keep track of elapsed time and how much time we need to wait
     start = 0
     elapsed = 0
@@ -915,6 +920,7 @@ def benchmark_deploy_block(controller, addresses, timeout, nr_deployments):
 
 
 def benchmark_deploy(controller, addresses, timeout):
+    assert len(addresses) >= 200, "Not enough addresses for deploy benchmark. Need at least 200."
     print("=======", "Start Benchmarking", "=======")
     benchmark_deploy_block(controller, addresses, timeout, 1)
     benchmark_deploy_block(controller, addresses, timeout, 10)
@@ -926,6 +932,7 @@ def benchmark_deploy(controller, addresses, timeout):
 def benchmark_sha256_block(
         controller, addresses, timeout, nr_hashes, 
         contract_instance, contract_address):
+    assert len(addresses) >= 1, "Not enough addresses for SHA256 benchmark. Need at least 1."
     # variables to keep track of elapsed time and how much time we need to wait
     start = 0
     elapsed = 0
@@ -963,6 +970,7 @@ def benchmark_sha256_block(
         controller = initial_controller
 
 def benchmark_sha256(controller, addresses, timeout, contract_src, contract_name):
+    assert len(addresses) >= 1, "Not enough addresses for SHA256 benchmark. Need at least 1."
     # Initialize the SHA256 contract
     owner_priv_key = addresses[0][0]
 
