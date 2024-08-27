@@ -16,6 +16,8 @@ The instance we used has these characteristics:
 - **Boot disk space:** 1TB SSD
 - **OS:** Ubuntu 22.04 LTS
 
+Warning: For the v6.0.0 release of the `zkevm-prover` it is recommended to stick with Ubuntu 22.04 LTS, as newer releases come with an incompatible version of `libpqxx`.
+
 At the time of writing, this machine costs 8.064 USD per hour. Note that there might be regions that are cheaper, or you can reduce the cost with reserved pricing.
 
 ## AWS Instructions
@@ -132,7 +134,7 @@ We need to do a minor update to `testvectors/config_runFile_e2e.json` file.
 We can do that using the following command.
 
 ```bash
-patch testvectors/config_runFile_e2e.json polygon_patches/config_runFile_e2e.json.patch
+patch testvectors/config_runFile_e2e.json ../zkrollup-benchmarking/polygon_patches/config_runFile_e2e.json.patch
 ```
 
 ### Modify `aggregator_service.cpp`
@@ -140,7 +142,7 @@ patch testvectors/config_runFile_e2e.json polygon_patches/config_runFile_e2e.jso
 We also need to apply some changes to `test/service/aggregator/aggregator_service.cpp` using the following command.
 
 ```bash
-patch test/service/aggregator/aggregator_service.cpp polygon_patches/aggregator_service.cpp.patch
+patch test/service/aggregator/aggregator_service.cpp ../zkrollup-benchmarking/polygon_patches/aggregator_service.cpp.patch
 ```
 
 With these changes we are, basically, doing two main things:
@@ -225,7 +227,9 @@ We can also see how much each proving phase took by investigating the `benchmark
 
 # Creating sample payloads for the prover
 
-In this first test, we are going to create a sample `erc20` transfer input file for the prover, and produce a proof for it.
+In the previous step, we created our first proof of some random looking inputs `testvectors/e2e/fork_9/input_executor_{0,1,2,3}.json`.
+
+Let's now look at generating proofs of concrete transactions which we define ourselves. Namely, we are going to create a sample `erc20` transfer input file for the prover, and produce a proof for it.
 
 To do this, we need to setup the `zkevm-testvectors` repository.
 
