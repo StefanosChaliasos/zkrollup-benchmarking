@@ -164,7 +164,7 @@ We can now test that the prover works as expected given some existing test cases
 To do that let's first produce the proofs.
 
 ```bash
-build/zkProver -c testvectors/config_runFile_e2e.json
+build/zkProver -c testvectors/config_runFile_e2e.json | tee logs.txt
 ```
 
 This command will basically do the following:
